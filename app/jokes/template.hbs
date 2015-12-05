@@ -1,0 +1,53 @@
+
+    <!-- Navbar goes here -->
+
+    <!-- Page Layout here -->
+    <div class="row main-section">
+    <div id="top-bar" class="col s12 top-bar">
+        <div class="menu"> 
+          <span title="sliding menu" {{action "goToRoute" "home"}}><i class="material-icons">keyboard_arrow_left</i></span>
+        </div>
+{{!--         <div class="center-align filter-link">
+          <span title="show filters, topics that user can select to find related jokes">
+            <i class="material-icons">keyboard_arrow_up</i> 
+            Filter 
+          <i class="material-icons">keyboard_arrow_up</i>
+        </span>
+        </div>  --}}
+      </div> 
+      <div class="col s12 joke-body">
+        <!-- Teal page content  -->
+
+ 		
+ 		{{outlet}}
+
+
+        <div class="right-side" {{action "moveBackAndForth" routeName displayedJoke.id }}>
+                  <div class="footer-copyright" style="transform: rotate(-90deg);">
+                <!-- <div class="container"> -->
+            <div class="center joke-explanation">
+              <i class="small material-icons">keyboard_arrow_up</i> 
+                Don't get it ?
+              <i class="small material-icons">keyboard_arrow_up</i>
+            </div>
+                <!-- </div> -->
+              </div>
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+    <footer class="page-footer">
+              <div class="footer-copyright">
+            <div class="container">
+        <div class="center next-joke" {{action "displayNext" shufflingType}}>
+          <i class="material-icons">keyboard_arrow_down</i> 
+            Another Joke
+          <i class="material-icons">keyboard_arrow_down</i>
+        </div>
+            </div>
+          </div>
+    </footer>

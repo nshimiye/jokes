@@ -12,7 +12,13 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
-
+    contentSecurityPolicy: {
+      'default-src': "'self'",
+      'script-src': "'self' 'unsafe-inline' ",
+      'style-src': "'self' 'unsafe-inline' fonts.googleapis.com",
+      'font-src': "'self' fonts.gstatic.com",
+      'img-src': "'self' * "
+    },
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

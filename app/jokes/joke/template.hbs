@@ -1,0 +1,34 @@
+        <!-- remove the valign-wrapper -->
+        <div class="" style="margin-left: 50px; margin-right: 50px;">
+          <div class="valign center-align full-width white-text text-darken-2">
+            <span class="main-part" 
+                  data-description="always present">
+              {{displayedJoke.mainPart}}
+            </span>
+            <br>
+            <span class="supporting-part" 
+                  data-description="optional, some jokes may require it">
+              {{displayedJoke.supportingPart}}
+            </span>
+          </div>
+
+          <!-- add this div element -->
+          <div class="joke-roots center-align">
+            <p>
+              {{displayedJoke.origins.firstObject.originsContent}}
+            </p>
+          </div>
+
+  <div class="row" style="padding-top: 5em;">
+    <form class="col s12" {{action "saveNewOrigin" displayedJoke  newOrigin on="submit"}}>
+      <div class="row">
+        <div class="input-field col s12">
+          {{input id="joke-origin" type="text" class="validate" value=newOrigin }}
+          <!-- <textarea id="textarea1" class="materialize-textarea" rows="1"></textarea> -->
+          <label for="joke-origin">Add you own Explanation</label>
+        </div>
+      </div>
+    </form>
+  </div>
+
+        </div>

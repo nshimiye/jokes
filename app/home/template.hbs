@@ -1,0 +1,29 @@
+<style media="screen">
+  body > .ember-view,
+  body > .ember-view > .valign-wrapper {
+    height: calc(100%);
+  }
+  body > .ember-view > .valign-wrapper
+  .welcome.card {
+  	background-color: transparent; box-shadow: none;
+  } 
+  body > .ember-view > .valign-wrapper
+  .welcome.card:hover {
+  	font-size: x-large;
+  	cursor: pointer;
+  } 
+</style>
+<div class="container valign-wrapper">
+  <div class="valign center" style="width: 100%;">
+	<div class="welcome card" 
+		{{action "goToRoute" "jokes.index"}}>
+		<div class="card-image" style="width: 200px; margin: auto;">
+			<img src="assets/images/logo-image.png">
+			{{!-- <span class="card-title">So Funny!</span> --}}
+		</div>
+		<div class="card-content" style="color: white;">
+			Know why you should keep laughing!
+          </div>
+     </div>
+  </div>
+</div>

@@ -14,6 +14,8 @@ module.exports = function(defaults) {
   // environments, specify an object as the first parameter. That
   // object's keys should be the environment name and the values
   // should be the asset to use in that environment.
+  app.import('bower_components/Materialize/dist/css/materialize.min.css');
+  app.import('bower_components/Materialize/dist/js/materialize.min.js');
   //
   // If the library that you are including contains AMD or ES6
   // modules that you would like to import into your application
